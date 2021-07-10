@@ -3,9 +3,9 @@
         <div v-for="todo in todos" :key="todo.text">
             <v-checkbox v-if="todo.done === true" :input-value="todo.done" @change="toggle(todo)">
                 <template v-slot:label>
-                <div>
-                    {{ todo.text }}
-                </div>
+                    <div>
+                        {{ todo.text }}
+                    </div>
                 </template>
             </v-checkbox>
         </div>
