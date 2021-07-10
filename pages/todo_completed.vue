@@ -1,9 +1,13 @@
 <template>
     <div>
         <div v-for="todo in todos" :key="todo.text">
-            <span v-if="todo.done == true">
-                {{ todo.text }}
-            </span>
+            <v-checkbox v-if="todo.done === true" :input-value="todo.done" @change="toggle(todo)">
+                <template v-slot:label>
+                <div>
+                    {{ todo.text }}
+                </div>
+                </template>
+            </v-checkbox>
         </div>
     </div>
 </template>
