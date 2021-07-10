@@ -3,6 +3,7 @@
     <v-col sm="8" md="4" lg="4">
       <v-card>
         <v-row no-gutters>
+          <h1 class="pl-5">Checklist</h1>
           <v-tabs>
             <v-tab href="#tab-1">Pending</v-tab>
             <v-tab-item class="pl-5" value="tab-1">
@@ -14,21 +15,23 @@
             </v-tab-item>
           </v-tabs>
         </v-row>
-        <v-row no-gutters class="pl-5">
-          <v-col lg="8">
-            <v-text-field v-model="name" label="Add an item here"></v-text-field>
-          </v-col>
-          <v-col lg="2">
-            <v-btn
-              @click="addTodo"
-              rounded
-              color="primary"
-              class="mt-2"
-            >
-              Add item
-            </v-btn>
-          </v-col>
-        </v-row>
+        <v-card-actions bottom>
+          <v-row no-gutters class="pl-5">
+            <v-col lg="8">
+              <v-text-field v-model="name" label="Add an item here"></v-text-field>
+            </v-col>
+            <v-col lg="2">
+              <v-btn
+                @click="addTodo"
+                rounded
+                color="primary"
+                class="mt-2"
+              >
+                Add item
+              </v-btn>
+            </v-col>
+          </v-row>
+        </v-card-actions>
       </v-card>
     </v-col>
   </v-row>

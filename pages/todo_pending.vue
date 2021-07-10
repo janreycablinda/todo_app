@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="todo_list">
         <div v-for="todo in todos" :key="todo.text">
             <v-checkbox v-if="todo.done === false" :checked="todo.done" @change="toggle(todo)">
                 <template v-slot:label>
